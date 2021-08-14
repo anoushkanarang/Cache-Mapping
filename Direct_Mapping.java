@@ -2,8 +2,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map.Entry;
+
 // DIRECT MAPPED CACHE
-public class directMapping {
+public class Direct_Mapping {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

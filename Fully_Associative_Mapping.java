@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Map.Entry;
 
 
-public class fullyAssociativemapping{ // FULLY ASSOCIATIVE CACHE
+public class Fully_Associative_Mapping{ // FULLY ASSOCIATIVE CACHE
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);

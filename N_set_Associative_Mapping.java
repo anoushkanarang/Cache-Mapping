@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map.Entry;
-public class nsetAssociativemapping{
+public class N_set_Associative_Mapping{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
