@@ -1,8 +1,38 @@
 # Cache-Mapping
-***Storing data in Direct Mapped, Associative, N-way Set Associative Cache Memory*** 
+***This is an implementation of Direct Mapped, Associative, N-way Set Associative Cache Memory in Java*** 
+
+### HOW TO RUN? 
+
+##### DEPENDENCIES #####
+   1. **[Git](https://git-scm.com/downloads)** 
+   2. **[Java Runtime Environment](https://www.java.com/en/download/manual.jsp)**
+   
+
+
+##### Clone this repository using the command below #####
+
+    git clone https://github.com/anoushkanarang/Cache-Mapping.git
+ 
+ ##### Change the current working directory to Cache-Mapping
+
+    cd Cache-Mapping
+    
+ ##### Execute the files using the commands below to execute Direct Mapped, Associative Mapped & N-way Set Associative Cache respectively.
+    
+    java Direct_Mapping.java
+<br>
+
+     java Fully_Associative_Mapping.java
+     
+<br>
+
+     java N_set_Associative_Mapping.java
+    
+    
+<hr>
 
 ### WHAT IS CACHE MEMORY?
-Cache memory is a smaller and faster type of memory located quite close to the CPU and holds the most recently accessed data or code. A cache is made up of cache lines which in turn are made up of words. Mathematically speaking, <br>
+Cache memory is a smaller and faster type of memory located quite close to the CPU and holds the most recently accessed data or code. A cache is made up of cache lines which in turn are made up of words. Mathematically, <br>
 <i>Cache size = No of  cache lines * size of one cache line</i>
 
 The word length of the machine is 16 bits which implies that any address with an integer value from 0 to 2**16 - 1, i.e., 0 to 65535 can be entered. A multilevel cache with 2 levels (Level 1 and Level 2) is implemented where L1 is a subset of L2,  i.e, L2 stores all the contents of L1 (however this is not true vice versa).
@@ -104,7 +134,6 @@ where w = number of bits needed for representing block size, s  = number of bits
 <hr>
 
 <h3>CODE EXPLANATION</h3>
-<br>
 
 1. <b>DIRECT MAPPED CACHE</b><i> [Direct_Mapping.java]</i> <br> Valid inputs are taken. The number of test cases is entered. For every command, a read/write operation is performed (as mentioned in the Reading and Writing section above, depending on the addresses’ presence/absence in the caches.) For a read operation, the data on that address (if present) is read off. A HashMap Data Structure is used to store the Cache Line number, Block number and Block contents of the two caches. Since a block is replaced every time when a call of the cache line (to which the former belongs) is made, we need not store when which block was called. In the end, the two caches are printed using the printMapString function.
 
@@ -113,7 +142,6 @@ where w = number of bits needed for representing block size, s  = number of bits
 3. <b>N-WAY SET ASSOCIATIVE CACHE</b><i> [N_set_Associative_Mapping.java]</i> <br>Valid inputs are taken. The number of test cases is entered. For every command, a read/write operation is performed (as mentioned in the Reading and Writing section above, depending on the addresses’ presence/absence in the caches.) For a read operation, the data on that address (if present) is read off. A HashMap Data Structure is used to store the Set number, Block number and Block contents of the two caches. An ArrayList ‘freq1’ and ‘freq2’ keeps a track of occurrence of the blocks in the cache and helps decide which of the blocks is/are least recent and has to be evicted according to the LRU scheme. In the end, the two caches are printed using the PrintMap function. A function called ‘removal’ is a helper function used to remove the least recently used element from the caches and their respective ‘freq’ ArrayLists. 
 <hr>
 <h3>FUNCTIONS USED IN THE CODES</h3>
-<br>
 
 1. ispowerof2() is used to check whether the entered number is in power of 2.
 2. getn() is used to return the log of a number to base 2. It is used to get the number of bits required to represent block size, number of sets and cache lines.
@@ -121,7 +149,6 @@ where w = number of bits needed for representing block size, s  = number of bits
 4. get_address() is used to print the address in binary, tags and offset values of both L1 and L2 caches.
 <hr>
 <h3>ERRORS HANDLED</h3>
-<br>
 
 1. If block size, number of cache lines or n for n-way associative are not in a power of 2.
 2. If the value of n for n-way associative is greater than the number of cache lines.
