@@ -1,10 +1,10 @@
 # Cache-Mapping
 ***Storing data in Direct Mapped, Associative, N-way Set Associative Cache Memory*** 
-<hr>
+
 ### WHAT IS CACHE MEMORY?
 Cache memory is a smaller and faster type of memory located quite close to the CPU and holds the most recently accessed data or code. A cache is made up of cache lines which in turn are made up of words. Mathematically speaking, <br>
 <i>Cache size = No of  cache lines * size of one cache line</i>
-<hr>
+
 The word length of the machine is 16 bits which implies that any address with an integer value from 0 to 2**16 - 1, i.e., 0 to 65535 can be entered. A multilevel cache with 2 levels (Level 1 and Level 2) is implemented where L1 is a subset of L2,  i.e, L2 stores all the contents of L1 (however this is not true vice versa).
 <hr>
 
